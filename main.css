@@ -5,7 +5,7 @@
 /*    font-size: 3rem;*/
 /*    font-weight: bold;*/
 /*}*/
-
+/* 
 #bigin {
   background-color: #ffdddd;
 }
@@ -20,8 +20,12 @@
 
 #contact {
   background-color: #ffffdd;
-}
+} */
 
+
+#box{
+  margin:30px;
+}
 
 
 .parent {

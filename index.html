@@ -14,9 +14,9 @@
     />
 
     <!-- 自サイトのCSS -->
-    <link rel="stylesheet" href="main.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <link rel="stylesheet" href="main.css" />
     <style>
       @media screen and (min-width: 300px) {
         .chart_container {
@@ -34,10 +34,11 @@
       }
     </style>
   </head>
+
   <body data-spy="scroll" data-target="#navbar">
-    <div class="container-fluid">
+    <div class="container-fluid" id="box">
       <div>
-        <nav class=" navbar-default">
+        <nav class="navbar-default">
           <div class="navbar-header">
             <!-- 横幅が狭い時に出るハンバーガーボタン -->
             <button
@@ -71,16 +72,23 @@
       </div>
       <!-- メインコンテンツ -->
       <div class="container-fluid" id="bigin">
-        <h3>愛犬の健康維持の大切さ</h3>
+        <span style="border-bottom: solid 5px red;"
+          >愛犬の健康維持の大切さ</span
+        >
+        <h3>
+          <span style="border-bottom: solid 5px red;"
+            >愛犬の健康維持の大切さ</span
+          >
+        </h3>
         <figure>
           <img src="happy1.jpg" class="responsive_img" alt="PHOTO1" />
           <figcaption>元気に過ごすには</figcaption>
         </figure>
-        <P
-          >毎日、飼い主が愛犬の体調を管理するため、摂取カロリー管理は欠かせません。<br />
+        <p>
+          毎日、飼い主が愛犬の体調を管理するため、摂取カロリー管理は欠かせません。<br />
           愛犬の特徴によって、食事の回数を変える際、1日の摂取量を確認しながら、<br />
-          必要なエネルギーを与えるようにしましょう！</P
-        >
+          必要なエネルギーを与えるようにしましょう！
+        </p>
 
         <h3>犬の気持ちを理解しよう！</h3>
         <figure>
@@ -114,7 +122,7 @@
           <input type="number" id="weightnum" />
           <label for="calorie">◆ご飯カロリー</label>
           <input type="number" id="calorienum" /> /100g
-          <label for="onetimeoffood">◆ご飯量</label>
+          <label for="onetimeoffood">ご飯量</label>
           <input type="number" id="onetimeoffoodnum" />/1回
         </div>
         <button type="button" id="energy-buttom">Energy</button>
@@ -132,10 +140,10 @@
             <img src="happy3.jpg" class="responsive_img" alt="PHOTO3" />
             <figcaption>元気で過ごすには</figcaption>
           </figure>
-          <P
-            >愛犬の体質やその日の体調、気温などによっても与えるご飯の適量は変化していきます。<br />
-            ここで、ご紹介した計算結果は適量の目安になります。</P
-          >
+          <p>
+            愛犬の体質やその日の体調、気温などによっても与えるご飯の適量は変化していきます。<br />
+            ここで、ご紹介した計算結果は適量の目安になります。
+          </p>
         </section>
       </div>
       <div id="AIKEN">
@@ -177,7 +185,7 @@
         var myChart = new Chart(ctx, {
           type: "bar",
           data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["1月", "2月", "3月", "4月", "5月", "6月"],
             datasets: [
               {
                 label: "# of Votes",
@@ -188,7 +196,7 @@
                   "rgba(255, 206, 86, 0.2)",
                   "rgba(75, 192, 192, 0.2)",
                   "rgba(153, 102, 255, 0.2)",
-                  "rgba(255, 159, 64, 0.2)"
+                  "rgba(255, 159, 64, 0.2)",
                 ],
                 borderColor: [
                   "rgba(255, 99, 132, 1)",
@@ -196,23 +204,23 @@
                   "rgba(255, 206, 86, 1)",
                   "rgba(75, 192, 192, 1)",
                   "rgba(153, 102, 255, 1)",
-                  "rgba(255, 159, 64, 1)"
+                  "rgba(255, 159, 64, 1)",
                 ],
-                borderWidth: 1
-              }
-            ]
+                borderWidth: 1,
+              },
+            ],
           },
           options: {
             scales: {
               yAxes: [
                 {
                   ticks: {
-                    beginAtZero: true
-                  }
-                }
-              ]
-            }
-          }
+                    beginAtZero: true,
+                  },
+                },
+              ],
+            },
+          },
         });
       </script>
 
@@ -226,8 +234,7 @@
           </ul>
         </div>
       </footer>
-
-      <small>&copy; 2019 .dog</small>
     </div>
   </body>
+  <small>&copy; 2019 .dog</small>
 </html>
